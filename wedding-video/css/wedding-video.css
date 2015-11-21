@@ -1,38 +1,88 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0; }
 
 .video--wrapper {
-  position: relative;
   display: block;
+  position: relative;
   background: #2c4e7a;
   text-align: center;
   -webkit-box-shadow: inset 0 0 10em #1c314d;
   -moz-box-shadow: inset 0 0 10em #1c314d;
-  -ms-box-shadow: inset 0 0 10em #1c314d;
   box-shadow: inset 0 0 10em #1c314d;
   width: 100%;
   height: 100vh; }
   .video--wrapper * {
-    color: #fff; }
-  .video--wrapper .video__nav {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .video--wrapper .video__nav a {
-      color: inherit;
-      text-decoration: none;
-      padding: 5px 10px; }
-  .video--wrapper .video__container {
-    display: inline-block;
-    background: #f7f7f7;
-    border: 4px solid #1c314d;
-    border-radius: 2px;
-    margin: 0 auto;
+    color: #f9f9f9; }
+  .video--wrapper .videos__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .video--wrapper .videos__container .videos__nav {
+      list-style: none;
+      margin: 0 0 30px;
+      padding: 0; }
+      .video--wrapper .videos__container .videos__nav li {
+        display: inline-block; }
+      .video--wrapper .videos__container .videos__nav a {
+        display: inline-block;
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0 5px;
+        padding: 5px 10px; }
+        .video--wrapper .videos__container .videos__nav a:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: #c2c2c2;
+          width: 0;
+          height: 4px;
+          -webkit-transition: width 0.4s ease;
+          -moz-transition: width 0.4s ease;
+          transition: width 0.4s ease; }
+    .video--wrapper .videos__container .videos__content {
+      background: #f9f9f9;
+      border: 8px solid #c2c2c2;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 0 10px #1c314d;
+      -moz-box-shadow: 0 0 10px #1c314d;
+      box-shadow: 0 0 10px #1c314d;
+      padding: 20px; }
+      .video--wrapper .videos__container .videos__content .video iframe {
+        width: 600px;
+        height: 337px; }
+
+@media screen and (min-width: 768px) {
+  .video--wrapper .videos__container .videos__nav a:hover:after {
+    width: 100%; } }
+@media screen and (max-width: 767px) {
+  .video--wrapper .videos__container .videos__nav {
+    margin: 0 0 15px; }
+    .video--wrapper .videos__container .videos__nav li {
+      display: block; }
+  .video--wrapper .videos__container .videos__content {
+    border: 4px solid #c2c2c2;
     padding: 10px; }
-    .video--wrapper .video__container .video {
-      display: none; }
-      .video--wrapper .video__container .video.show {
-        display: initial; }
+    .video--wrapper .videos__container .videos__content .video iframe {
+      width: 425px;
+      height: 239px; } }
+@media screen and (max-width: 480px) {
+  .video--wrapper .videos__container .videos__content .video iframe {
+    width: 275px;
+    height: 155px; } }
 
 /*# sourceMappingURL=wedding-video.css.map */
