@@ -10,9 +10,9 @@ var videos = {
 	},
 
 	vimeoUrls: {
-		'ceremony': 'https://player.vimeo.com/video/146158163',
-		'cocktail-hour': 'https://player.vimeo.com/video/146161762',
-		'reception': 'https://player.vimeo.com/video/146155089'
+		'ceremony': '//www.patrickwilver.com/hubfs/videos/wedding-videos/ceremony.mp4',
+		'cocktail-hour': '//www.patrickwilver.com/hubfs/videos/wedding-videos/cocktail-hour.mp4',
+		'reception': '//www.patrickwilver.com/hubfs/videos/wedding-videos/reception.mp4'
 	},
 
 	eventBindings: function() {
@@ -24,7 +24,7 @@ var videos = {
 
 	showVideo: function(id) {
 		if (videos.vimeoUrls[id]) {
-			$('iframe').attr('src', videos.vimeoUrls[id]);
+			$('video').attr('src', videos.vimeoUrls[id]);
 		} else {			
 			// remove bad anchor, reset url
 			var url = window.location.href.split('#')[0];
