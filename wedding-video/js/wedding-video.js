@@ -9,7 +9,7 @@ var videos = {
 		}
 
 		if (!$('.videos__nav a').hasClass('active')) {
-			videos.toggleActiveNav(videos.videoUrls['ceremony']);
+			videos.toggleActiveNav('ceremony');
 		}
 	},
 
