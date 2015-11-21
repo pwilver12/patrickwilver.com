@@ -106,7 +106,7 @@ body {
       color: #f9f9f9; }
   .video--wrapper .videos__container .videos__content {
     border: 4px solid #c2c2c2;
-    padding: 10px; }
+    border-radius: 2px; }
     .video--wrapper .videos__container .videos__content video {
       width: 425px;
       height: 239px; } }
