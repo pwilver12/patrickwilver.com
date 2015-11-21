@@ -18,19 +18,28 @@ var videos = {
 	eventBindings: function() {
 		$('.videos__nav a').click(function() {
 			var name = $(this).attr('data-name');
+
+			videos.toggleActiveNav(name);
 			videos.showVideo(name);
 		});
 	},
 
 	showVideo: function(id) {
 		if (videos.vimeoUrls[id]) {
+			videos.toggleActiveNav(id);
 			$('video').attr('src', videos.vimeoUrls[id]);
+
 		} else {			
 			// remove bad anchor, reset url
 			var url = window.location.href.split('#')[0];
 			var state = { originalUrl: url };
 			window.history.replaceState(state, '', url);
 		}
+	},
+
+	toggleActiveNav: function(name) {
+		$('.videos__nav a').removeClass('active');
+		$('a[data-name="' + name + '"').addClass('active');
 	}
 }
 
