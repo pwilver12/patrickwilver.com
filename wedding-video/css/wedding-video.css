@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.video--wrapper {
+  position: relative;
+  display: block;
+  background: #2c4e7a;
+  color: #fff;
+  text-align: center;
+  -webkit-box-shadow: inset 0 0 10em #1c314d;
+  -moz-box-shadow: inset 0 0 10em #1c314d;
+  -ms-box-shadow: inset 0 0 10em #1c314d;
+  box-shadow: inset 0 0 10em #1c314d;
+  width: 100%;
+  height: 100vh; }
+  .video--wrapper .video__container {
+    display: inline-block;
+    background: #f7f7f7;
+    border: 4px solid #1c314d;
+    border-radius: 2px;
+    margin: 0 auto;
+    padding: 10px; }
+
+/*# sourceMappingURL=wedding-video.css.map */
