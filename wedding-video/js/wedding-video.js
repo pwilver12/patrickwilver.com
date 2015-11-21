@@ -6,11 +6,18 @@ var videos = {
 	eventBindings: function() {
 		$('.video__nav a').click(function() {
 			var name = $(this).attr('data-name');
-			console.log(name);
 
 			videos.hideVideos();
 			videos.showVideo(name);
 		});
+	},
+
+	hideVideos: function() {
+		$('.video').removeClass('show');
+	},
+
+	showVideo: function(id) {
+		$('#' + id).addClass('show');
 	}
 }
 
