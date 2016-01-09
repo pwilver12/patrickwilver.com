@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fibonacci Sequence Generator</title>
+	<style type="text/css">
+		* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: 'Trebuchet MS', Helvetica, sans-serif; }
+		body { overflow: hidden; position: relative; background: #476D7A; color: #eee; -webkit-box-shadow: inset 0 0 5em #1E2D33; -moz-box-shadow: inset 0 0 5em #1E2D33; box-shadow: inset 0 0 5em #1E2D33; width: 100%; height: 100vh; margin: 0; padding: 0; }
+		.fibonacci--wrapper { position: absolute; top: 45%; left: 50%; text-align: center; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+		h1 { font-weight: normal; text-align: center; letter-spacing: 2px; }
+		input { background: #eee; color: #476D7A; font-size: 14px; text-align: right; border: 3px solid #1E2D33; border-radius: 3px; width: 250px; margin-right: 10px; padding: 12px; }
+		input:focus { outline: none; background: #fff; }
+		button { background: #1E2D33; color: #eee; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; border: 3px solid #1E2D33; border-radius: 3px; padding: 12px 27px; }
+		button:hover { background: rgba(30, 45, 51, 0.7); }
+		button:focus { outline: none; }
+		button:active { background: transparent; border-color: #eee; }
+		.fibonacci__sequence { margin-top: 50px; }
+	</style>
+</head>
+<body>
+
+	<div class="fibonacci--wrapper">
+		<h1>Fibonacci Sequence Generator</h1>
+		<input name="length" type="text" placeholder="Sequence length">
+		<button>Generate</button>
+		<p class="fibonacci__sequence">&nbsp;</p>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="fibonacci.js"></script>
+</body>
+</html>
