@@ -31,7 +31,7 @@ var app = {
 		if (i === 'power') {
 			$('.' + i).html(app.selections['ball_' + i]);
 		} else {
-			$('.number')[i].html(app.selections['ball_' + i]);
+			$('.number').eq(i).html(app.selections['ball_' + i]);
 		}
 	}
 }
