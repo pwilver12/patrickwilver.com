@@ -1,11 +1,112 @@
 
 // V A R I A B L E S
 // =================
+$white: #fff
 $darkGray: #444
+$powerball: #e64545
+$powerballBorder: #b33636
+$cta: #36b35f
+$ctaHover: #32a658
+
+
+
+// M I X I N S
+// ===========
+=prefix($property, $value)
+	-webkit-#{$property}: $value
+	-moz-#{$property}: $value
+	-ms-#{$property}: $value
+	#{$property}: $value
+
+
+
+// F O N T S
+// =========
+@font-face
+	font-family: 'crash'
+	src: url('//www.patrickwilver.com/hubfs/fonts/crash-numbering/Crasng.ttf')
+
+@font-face
+	font-family: 'asap'
+	src: url('//www.patrickwilver.com/hubfs/fonts/Asap/AsapRegular.otf')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'asap'
+	src: url('//www.patrickwilver.com/hubfs/fonts/Asap/AsapBold.otf')
+	font-weight: 600
+	font-style: normal
+
 
 
 // S T Y L E S
 // ===========
+html, body
+	font-size: 15px
+
+h1
+	font-size: 2.2rem
+	font-weight: 400
+	letter-spacing: .1em
+
+p
+	margin-top: 1rem
+	margin-bottom: 1rem
+
+*
+	+prefix(box-sizing, border-box)
 
 .custom-page-template
 	background: $darkGray
+	margin: 0
+	padding: 0
+
+.lottery__wrapper
+	overflow: hidden
+	position: absolute
+	top: 50%
+	left: 50%
+	color: $white
+	font-family: 'asap', Helvetica, sans-serif
+	text-align: center
+	text-transform: uppercase
+	padding: 0 30px
+	+prefix(transform, translate(-50%, -50%))
+
+	.wrapper
+		overflow: hidden
+
+	.number--wrapper
+		margin: 2rem 0
+
+		.number
+			display: inline-block
+			font-size: 60px
+			font-family: 'crash', Helvetica, sans-serif
+			padding: 0 30px
+
+			&.powerball
+				background: $powerball
+				border: 3px solid $powerballBorder
+				border-radius: 150px
+				margin: 0 30px
+				padding-top: 1rem
+				padding-bottom: 1rem
+
+	.cta--wrapper
+		margin: 1rem 0
+
+		.cta
+			display: inline-block
+			background: $cta
+			color: inherit
+			font-size: 1.1rem
+			font-weight: 400
+			letter-spacing: .1em
+			text-decoration: none
+			border-radius: 5px
+			padding: 1.5rem 3rem
+
+			&:hover
+				background: $ctaHover
