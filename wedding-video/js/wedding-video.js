@@ -42,7 +42,7 @@ var videos = {
 
 	toggleActiveNav: function(name) {
 		$('.videos__nav a').removeClass('active');
-		$('a[data-name="' + name + '"').addClass('active');
+		$('a[data-name="' + name + '"]').addClass('active');
 	}
 }
 

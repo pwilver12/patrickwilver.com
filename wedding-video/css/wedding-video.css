@@ -102,8 +102,6 @@ body {
     margin: 0 0 15px; }
     .video--wrapper .videos__container .videos__nav li {
       display: block; }
-    .video--wrapper .videos__container .videos__nav a {
-      color: #f9f9f9; }
   .video--wrapper .videos__container .videos__content {
     border: 4px solid #c2c2c2;
     border-radius: 2px; }
